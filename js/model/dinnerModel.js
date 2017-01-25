@@ -2,7 +2,7 @@
 var DinnerModel = function() {
 
     var numberOfGuests;
-    var selectedDishes = new Array(); //dishes on the menu
+    var selectedDishes = []; //dishes on the menu
 
 	this.setNumberOfGuests = function(num) {
 		numberOfGuests = num;
@@ -15,11 +15,7 @@ var DinnerModel = function() {
 
 	//Returns the dish that is on the menu for selected type
 	this.getSelectedDish = function(type) {
-    for(dish in selectedDishes){
-      if(dish.type == type){
-        return dish;
-      }
-    }
+        //TODO
 	}
 
 	//Returns all the dishes on the menu.
@@ -29,27 +25,12 @@ var DinnerModel = function() {
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-        var allIngredients;
-        for(dish in selectedDishes){
-          for(ingredient in dish.ingredients){
-            //TODO CASCADE AMOUNT
-            allIngredients.push(ingredient);
-          }
-        }
-        return allIngredients;
+        //TODO
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-        var totalPrice;
-        var ingredients = this.getAllIngredients();
-//        for(ingredient in ingredients){
-//          totalPrice += ingredient.price;
-//        }
-        for(var i = 0; i < ingredients.length; i++){
-            totalPrice += ingredients[i].price;
-        }
-        return totalPrice * numberOfGuests;
+        //TODO
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
