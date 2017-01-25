@@ -15,7 +15,11 @@ var DinnerModel = function() {
 
 	//Returns the dish that is on the menu for selected type
 	this.getSelectedDish = function(type) {
-        //TODO
+        for(var i = 0; i < selectedDishes.length; i++){
+            if(selectedDishes[i].type == type){
+                return selectedDishes[i];
+            }
+        }
 	}
 
 	//Returns all the dishes on the menu.
@@ -25,12 +29,24 @@ var DinnerModel = function() {
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-        //TODO
+        var allIngredients = [];
+        for(var i = 0; i < selectedDishes.length; i++){
+            var dishIngredients = selectedDishes[i].ingredients;
+            for(var j = 0; j < dishIngredients.length; j++){
+                allIngredients.push(dishIngredients[j]);
+            }
+        }
+        return allIngredients;
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-        //TODO
+        var ingredients = this.getAllIngredients();
+        var price = 0;
+        for(var i = 0; i < ingredients.length; i++){
+            price += ingredients[i].price;
+        }
+        return price * numberOfGuests;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
@@ -38,18 +54,19 @@ var DinnerModel = function() {
 	this.addDishToMenu = function(id) {
         var dishToAdd = this.getDish(id);
 
-        //for(dish in this.selectedDishes){
-        //  if(dish.type === dishToAdd.type){
-        //    removeDishFromMenu(id);
-        //  }
-        //}
+        for(var i = 0; i < selectedDishes.length; i++){
+          if(selectedDishes[i].type === dishToAdd.type){
+            this.removeDishFromMenu(selectedDishes[i].id);
+          }
+        }
+
         selectedDishes.push(dishToAdd);
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
         for(var i = 0; i < selectedDishes.length; i++){
-          if(dishes[i].id === id){
+          if(selectedDishes[i].id == id){
               selectedDishes.splice(i, 1);
           }
         }
