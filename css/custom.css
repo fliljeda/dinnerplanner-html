@@ -2,6 +2,7 @@ body {
 	padding-top: 100px; 
 	background-image: url("../images/background_tomato_eating.jpg");
 	background-size: cover;
+	font-family: "Century Gothic", sans-serif; /* fix font */
 }
 
 .navbar{	
@@ -27,4 +28,37 @@ body {
 	font-weight: bold;
 	float: left;
 
+}
+
+#mainStart {
+	margin-left: 20px;
+}
+
+#welcomeBox {
+	padding: 10px 10px 10px 30px;
+	margin-top: 350px; /* fixed, might be bad (?) */
+	float: left;
+	background-color: rgba(255,255,255,0.8);
+	width: 65%;	
+	font-weight: bold;
+
+}
+
+.container .btn-default {
+	width: 50%;
+	max-height: 70px;
+	min-height: 40px;
+	margin-bottom: 20px;
+	background-color: rgba(250,146,27,1);
+	box-shadow: 3px 3px;
+	border: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color: black;
+	font-weight: bolder;
+	font-size: 30px;
+}
+
+hr {
+	border-color: #000000;
+	color: #000000;
 }
