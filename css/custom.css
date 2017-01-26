@@ -2,6 +2,19 @@ body {
 	padding-top: 100px; 
 }
 
+.navbar{
+	padding-top: 40px;
+}
+
 .navbar p {
-	text-align: center;
+	padding-left : 55px;
+	float:left;
+
+}
+
+.navbar #myHeader {
+
+	font-size: 40px;
+	font-weight: bold;
+	float: left;
 }
