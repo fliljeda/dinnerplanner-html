@@ -110,9 +110,23 @@ hr {
 }
 
 #incrementor button {
-	height: 49%;
+	height: 50%;
 	display: block;
 	float: left;
+}
+
+.glyphicon-chevron-up {
+	top: 0px;
+	line-height: 2px;
+	padding-left: 7px;
+	padding-right: 5px;
+
+}
+
+.glyphicon-chevron-down {
+	top: 0px;
+	line-height: 2px;
+
 }
 
 #ppl input {
