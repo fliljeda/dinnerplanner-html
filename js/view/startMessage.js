@@ -25,7 +25,12 @@ var StartMessage = function (container) {
 
     var startButton = document.createElement("button");
     startButton.setAttribute("type", "button");
+    startButton.onclick = startDinnerPlanner;
     startButton.className += " btn-default";
     startButton.innerHTML = "Create new dinner";
     welcomeBox.append(startButton);
+}
+
+function startDinnerPlanner(){
+    $('#mainStart').hide();
 }

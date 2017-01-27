@@ -9,8 +9,12 @@ var TopBanner = function (container) {
     navContainer.id = "navContainer";
     navBar.append(navContainer);
 
-    var navHeader = document.createElement("p");
+    var navHeader = document.createElement("button");
+    navHeader.style.background = "transparent";
+    navHeader.style.border = "none";
+    navHeader.setAttribute("type", "link");
     navHeader.id = "myHeader";
+    navHeader.onclick = setStartScreen;
     navHeader.innerHTML = "HOMELETTE";
     navContainer.append(navHeader);
 
@@ -18,4 +22,8 @@ var TopBanner = function (container) {
     navQuote.id = "quote";
     navQuote.innerHTML = "From the best chefs in the world directly into your kitchen";
     navContainer.append(navQuote);
+}
+
+function setStartScreen(){
+    $("#mainStart").show();
 }
