@@ -16,6 +16,7 @@ body {
 #navContainer {
 	margin-left: 0px;
 	position: relative;
+
 }
 
 .navbar #quote {
@@ -77,7 +78,7 @@ hr {
 
 #mainFirst {
 	margin-left: 0px;
-	margin-top: 117px; /*ugly, fix relative to top banner */
+	margin-top: 113px; /*ugly, fix relative to top banner */
 	padding-left: 0px;
 	position: fixed;
 }
@@ -108,7 +109,7 @@ hr {
 }
 
 #incrementor button {
-	height: 50%;
+	height: 49%;
 	display: block;
 	float: left;
 }
@@ -131,5 +132,33 @@ hr {
 	height: 40px;
 	margin-left: -10px;
 	margin-right: -10px;
+}
+
+#products {
+	height: 60px;
+	border-top-style: solid;
+	border-top-color: white;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+}
+
+#products p {
+	position: relative;
+  	top: 40%;
+  	transform: translateY(-40%);
+}
+
+#totalSum {
+	height: 60px;
+	border-top-style: solid;
+	border-top-color: white;
+	border-bottom-style: solid;
+	border-bottom-color: white;
+}
+
+#totalSum p {
+	position: relative;
+  	top: 40%;
+  	transform: translateY(-40%);
 }
 
