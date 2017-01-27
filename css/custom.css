@@ -91,6 +91,7 @@ hr {
 	height: 100%;
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-right: 0px;
 }
 .overlay {
   position: fixed;
@@ -99,3 +100,36 @@ hr {
   left: 0;
   top: 0;
 }
+
+#incrementor {
+	float: left;
+	width:10%;
+	height: 100%;
+}
+
+#incrementor button {
+	height: 50%;
+	display: block;
+	float: left;
+}
+
+#ppl input {
+	float:left;
+	height:100%;
+	width: 20%;
+}
+
+#dishName {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-color: black;
+	background-color: #d5d5d4;
+	height: 40px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
