@@ -1,5 +1,5 @@
 body { 
-	padding-top: 100px; 
+	padding-top: 106px; 
 	background-image: url("../images/background_tomato_eating.jpg");
 	background-size: cover;
 	font-family: "Century Gothic", sans-serif; /* fix font */
@@ -77,19 +77,11 @@ hr {
 	color: #000000;
 }
 
-#mainFirst {
-	margin-left: 0px;
-	margin-top: 113px; /*ugly, fix relative to top banner */
-	padding-left: 0px;
-	position: fixed;
-}
-
 #sidebar {
 	background-color: white;
 	position: relative;
 	border-style: solid;
 	border-color: black;
-	width: 25%;
 	height: 100%;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -101,6 +93,7 @@ hr {
   right: 0;
   left: 0;
   top: 0;
+  float:left;
 }
 
 #incrementor {
@@ -177,3 +170,28 @@ hr {
   	transform: translateY(-40%);
 }
 
+#foodImage {
+	width: 100%;
+}
+
+#page3 .btn-default {
+	font-size: 15px;	
+}
+
+#page3 {
+	margin-right: 0px;
+	margin-left: 0px;
+	width: 100%;
+}
+
+.row #ingredients {
+	font-size: 20px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	background-color: rgba(255,204,51,0.5);
+}
+
+.row h3 {
+	font-weight: bold;
+}
