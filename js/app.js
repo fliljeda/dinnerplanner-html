@@ -6,7 +6,7 @@ $(function() {
 	//And create the needed controllers and views
     var topBanner = new TopBanner($("#topBanner1"));
     var startMessage = new StartMessage($("#mainStart"));
-    var itemDescription = new ItemDescription($("#page3"));
+    var itemDescription = new ItemDescription($("#page3"), model);
     var sideBar = new SideBar($("#sideBarDiv"));
 
 });
