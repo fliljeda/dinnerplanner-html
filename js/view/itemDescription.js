@@ -3,6 +3,7 @@ var ItemDescription = function (container, model){
 	fillIngredients(model.getDish(1));
 }
 
+//fills the ingredient list with the ingredients of the given dish object. 
 function fillIngredients (dish){
 	var ingredients = dish.ingredients;
 	var ingredientName = document.getElementById("ingredientName");
@@ -35,6 +36,7 @@ function fillIngredients (dish){
 		currency.innerHTML = "SEK"; // SEK by default
 		ingredientCurrency.append(currency);
 
+		//to calculate the total cost of the ingredients
 		totalCost += price;
 	}
 
