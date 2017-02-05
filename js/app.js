@@ -15,6 +15,9 @@ $(function() {
     if ($("#print_page").length){ //if div exists
         var print = new Print($("#print_page"), model);
     }
+    if ($("#selectDish").length){ //if div exists
+        var selectDish = new SelectDish($("#selectDish"), model);
+    }
     var sideBar = new SideBar($("#sideBarDiv"));
 
 });

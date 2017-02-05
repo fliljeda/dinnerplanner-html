@@ -1,5 +1,5 @@
 #chosenCourse {
-    width: 50%;
+    width: 100%;
     border: 2px solid black;
 
 }
@@ -20,9 +20,8 @@
 
 #foodList {
     background-color: #FFFFFF;
-    border: 2px solid #000000;
     height:100%;
-    overflow-y: scroll;
+
 }
 
 
@@ -50,4 +49,25 @@
     background-color: rgb(221,221,221);
     margin-bottom: 10px;
     white-space: normal;
+}
+
+.row {
+    width:100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#selectDish .container {
+    width:100%;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+#selectDish #sidebar {
+    margin-left: -18px;
+    margin-top: -2px;
+}
+
+#foodList #firstFood {
+    margin-left: 35px;
 }

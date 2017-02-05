@@ -2,28 +2,54 @@ var SelectDish = function (container, dinnermodel) {
 
     //WHOLE VIEW CONTAINER
     var viewContainer = document.createElement("div");
-    viewContainer.className += " container-fluid";
+    viewContainer.className += " container";
     viewContainer.style.height = "100%";
     container.append(viewContainer);
 
     //THE BAR WHERE YOU SELECT DISHES
     var dishSelectBar = document.createElement("div");
-    dishSelectBar.className += "container row";
+    dishSelectBar.className += "row";
     dishSelectBar.style.border = "2px solid";
     dishSelectBar.style.backgroundColor = "#FFE599";
     viewContainer.append(dishSelectBar);
 
+
+
+
+    
+    //////////////MANSKE
+    var colSideBar = document.createElement("div");
+    colSideBar.className += "col-md-2";
+
+    var sideBar = document.createElement("div");
+    sideBar.id = "sideBarDiv";
+
+    colSideBar.append(sideBar);
+    dishSelectBar.append(colSideBar);
+    ///////////////////MANSKE
+
     //TITLE
+
+    var col1 = document.createElement("div");
+    col1.className += "col-md-10";
+    col1.style.paddingLeft = "50px";
+
     var selectDishTitle = document.createElement("h3");
     selectDishTitle.innerHTML = "SELECT DISH";
-    dishSelectBar.append(selectDishTitle);
+    col1.append(selectDishTitle);
+    dishSelectBar.append(col1);
 
     //SEPERATION LINE
     dishSelectBar.append(document.createElement("hr"));
 
+    var col2 = document.createElement("div");
+    col2.className += "col-md-2";
+    dishSelectBar.append(col2);
+
     //SEARCH BAR (container)
     var searchContainer = document.createElement("div");
-    searchContainer.className += "col col-md-4";
+    searchContainer.className += "col col-md-3";
+    searchContainer.style.paddingLeft = "50px";
     dishSelectBar.append(searchContainer);
 
     var searchForm = document.createElement("input");
@@ -48,7 +74,7 @@ var SelectDish = function (container, dinnermodel) {
     //COURSE MENU (container)
     var courseMenu = document.createElement("div");
     courseMenu.style.display = "inline-block";
-    courseMenu.className += "col col-md-4";
+    courseMenu.className += "col col-md-3";
     dishSelectBar.append(courseMenu);
 
     // course form
@@ -77,19 +103,28 @@ var SelectDish = function (container, dinnermodel) {
 
     //LIST AND PICTURES OF FOOD
     var foodList = document.createElement("div");
-    foodList.className += "container row";
+    foodList.className += "row";
     foodList.id = "foodList";
+    foodList.innerHTML = '<div class="col-md-2"></div>';
     viewContainer.append(foodList);
+
 
     var menu = dinnermodel.getAllDishes(courseSelector.value);
     console.log(menu.length);
     console.log(courseSelector.value);
+
+
+    var counter = 0;
     for(var i = 0; i < menu.length; i++){
         var dish = menu[i];
 
         //FOOD CONTAINER 1
         var foodContainer = document.createElement("div");
         foodContainer.className += "col col-md-2 foodContainer";
+        if(!counter){ //HOT FIX MOTHERFUCKERS
+            foodContainer.id = "firstFood";
+        }
+        counter++;
         foodList.append(foodContainer);
 
         //FOOD PICTURE 2
