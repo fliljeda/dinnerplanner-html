@@ -196,3 +196,102 @@ hr {
 .row h3 {
 	font-weight: bold;
 }
+
+#overview_page {
+	margin-left: 0px;
+	width: calc(100% - 15px);
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#overview_page hr {
+	border-top: 2px solid;
+	margin-right: 30px;
+	margin-left: 45px;
+}
+
+#overview_banner {
+	border-style: solid;
+	border-color: black;
+	border-width: 5px;
+	margin-left: 0px;
+	background-color: rgba(255,204,51,0.5); 
+}
+
+#overview_banner .btn-default {
+	width: calc(100% - 20px);
+	margin-top: 20px;	
+	font-weight: normal;
+	margin-right: 20px;
+}
+
+#overview_banner h2 {
+	margin-top: 30px;
+	margin-left: 30px;
+	font-weight: bold;
+}
+
+#overview_food {
+	margin-top: 35px;
+	margin-bottom: 35px;
+
+}
+
+#overview_food img {
+	border-style: solid;
+	border-top-width: 3px;
+	border-right-width: 3px;
+	border-left-width: 3px;
+	border-color: black;
+	padding-top: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+	vertical-align: top;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;	
+	width: 100%;
+
+}
+
+#overview_food .name {
+	text-align: center;
+	display: block;
+	background-color: #d5d5d4;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	font-size: 18px;
+	font-weight: bold;
+
+}
+
+#overview_food .price {
+	text-align: right;
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #991d1d;
+	font-size: 18px;
+	font-weight: bold;
+
+}
+
+#overview_print .btn-default {
+	width: 100%;	
+	font-weight: normal;
+}
+
+#overview_print {
+	margin-top: 50px;
+}
+
+.verticalLine {
+	border-style: solid;
+	border-left-width: 1px;
+	height: 100%;
+	border-color: black;
+	
+}
