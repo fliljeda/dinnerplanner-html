@@ -9,8 +9,11 @@ $(function() {
     if ($("#page3").length){ //if div exists
         var itemDescription = new ItemDescription($("#page3"), model);
     }
-     if ($("#overview_page").length){ //if div exists
+    if ($("#overview_page").length){ //if div exists
         var overview = new Overview($("#overview_page"), model);
+    }
+    if ($("#print_page").length){ //if div exists
+        var print = new Print($("#print_page"), model);
     }
     var sideBar = new SideBar($("#sideBarDiv"));
 
