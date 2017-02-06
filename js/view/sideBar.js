@@ -59,13 +59,14 @@ var SideBar = function (container) {
 
     var dishText = document.createElement("p");
     dishText.style.float = "left";
-    dishText.style.padding = "10px";
+    dishText.style.paddingTop = "10px";
     dishText.innerHTML = "Dish Name";
     dishName.append(dishText);
 
     var dishCost = document.createElement("p");
     dishCost.style.float = "right";
-    dishCost.style.padding = "10px";
+    dishCost.style.paddingTop = "10px";
+    
     dishCost.innerHTML = "Cost";
     dishName.append(dishCost);
 
@@ -86,6 +87,7 @@ var SideBar = function (container) {
 
     var totalSum = document.createElement("div");
     totalSum.id = "totalSum";
+    totalSum.style.paddingRight = "10px";
     sideBar.append(totalSum);
 
     var pendingSum = document.createElement("p");
@@ -95,6 +97,8 @@ var SideBar = function (container) {
 
     var confirmButton = document.createElement("div");
     confirmButton.id = "confirmButton";
+    confirmButton.style.paddingLeft = "10px";
+    confirmButton.style.paddingRight = "10px";
     sideBar.append(confirmButton);
 
     var confButton = document.createElement("button");
