@@ -276,6 +276,16 @@ hr {
 
 }
 
+#overview_food .total {
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+
+}
+
+
 #overview_food .price {
 	text-align: right;
 	display: block;
@@ -296,11 +306,15 @@ hr {
 	margin-top: 50px;
 }
 
-.verticalLine {
+#verticalLine {
 	border-style: solid;
-	border-left-width: 1px;
-	height: 100%;
+	border-left-width: 3px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-top-width: 0px;
 	border-color: black;
+	padding-top: 275px;
+
 	
 }
 

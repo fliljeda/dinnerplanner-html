@@ -4,7 +4,7 @@ var Print = function (container, model){
 	model.addDishToMenu(1);
 	model.addDishToMenu(100);
 	model.addDishToMenu(201);
-	model.setNumberOfGuests(3);
+	model.setNumberOfGuests(5);
 	///////////////////////////////
 
 	var guests = model.getNumberOfGuests();
