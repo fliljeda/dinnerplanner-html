@@ -1,17 +1,19 @@
 var SideBar = function (container) {
 
     var sideBar = document.createElement("div");
-    sideBar.className += " nav nav-pills nav-stacked";
+    sideBar.className += "col-md-2 nav nav-pills nav-stacked";
     sideBar.id = "sidebar";
     container.append(sideBar);
 
 
-    var header4 = document.createElement("h4");
-    header4.innerHTML = "My Dinner";
+    var header4 = document.createElement("div");
+    header4.className += " row";
+    header4.innerHTML = "<h3>My Dinner</h3>";
     header4.style.fontWeight = "bold";
     sideBar.append(header4);
 
     var numberOfGuests = document.createElement("div");
+    numberOfGuests.className += " row";
     numberOfGuests.id = "ppl";
     numberOfGuests.style.height = "30px";
     sideBar.append(numberOfGuests);
@@ -51,6 +53,7 @@ var SideBar = function (container) {
     incrementor.append(buttonDown);
 
     var dishName = document.createElement("div");
+    dishName.className += " row";
     dishName.id = "dishName";
     sideBar.append(dishName);
 
@@ -67,6 +70,7 @@ var SideBar = function (container) {
     dishName.append(dishCost);
 
     var products = document.createElement("div");
+    products.className += " row";
     products.id = "products";
     sideBar.append(products);
 

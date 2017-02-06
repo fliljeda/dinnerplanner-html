@@ -2,71 +2,60 @@ var SelectDish = function (container, dinnermodel) {
 
     //WHOLE VIEW CONTAINER
     var viewContainer = document.createElement("div");
-    viewContainer.className += " container";
+    viewContainer.className += "col-md-10 container";
     viewContainer.style.height = "100%";
+    viewContainer.style.marginRight = "0px";
     container.append(viewContainer);
 
     //THE BAR WHERE YOU SELECT DISHES
     var dishSelectBar = document.createElement("div");
     dishSelectBar.className += "row";
-    dishSelectBar.style.border = "2px solid";
+    dishSelectBar.style.border = "3px solid";
     dishSelectBar.style.backgroundColor = "#FFE599";
     viewContainer.append(dishSelectBar);
 
 
-
-
-    
-    //////////////MANSKE
-    var colSideBar = document.createElement("div");
-    colSideBar.className += "col-md-2";
-
-    var sideBar = document.createElement("div");
-    sideBar.id = "sideBarDiv";
-
-    colSideBar.append(sideBar);
-    dishSelectBar.append(colSideBar);
-    ///////////////////MANSKE
-
     //TITLE
 
-    var col1 = document.createElement("div");
-    col1.className += "col-md-10";
-    col1.style.paddingLeft = "50px";
-
-    var selectDishTitle = document.createElement("h3");
-    selectDishTitle.innerHTML = "SELECT DISH";
-    col1.append(selectDishTitle);
-    dishSelectBar.append(col1);
+    var selectDishTitle = document.createElement("div");
+    selectDishTitle.innerHTML = "<h3>SELECT DISH</h3>";
+    selectDishTitle.className += " row";
+    dishSelectBar.append(selectDishTitle);
 
     //SEPERATION LINE
     dishSelectBar.append(document.createElement("hr"));
 
-    var col2 = document.createElement("div");
-    col2.className += "col-md-2";
-    dishSelectBar.append(col2);
 
     //SEARCH BAR (container)
     var searchContainer = document.createElement("div");
-    searchContainer.className += "col col-md-3";
-    searchContainer.style.paddingLeft = "50px";
+    searchContainer.className += " row";
     dishSelectBar.append(searchContainer);
+
+    var searchDiv = document.createElement("div");
+    searchDiv.style.paddingRight = "0px";
+    searchDiv.className += " col-md-3";
+    searchContainer.append(searchDiv);
 
     var searchForm = document.createElement("input");
     searchForm.setAttribute("type", "text");
     searchForm.className += " form-control";
     searchForm.placeholder = "Enter key words";
     searchForm.id = "selectedDishSearch";
-    searchContainer.append(searchForm);
+    searchDiv.append(searchForm);
 
     //SEARCH BUTTON 
+
+    var searchButtonDiv = document.createElement("div");
+    searchButtonDiv.className += " col-md-2";
+    searchButtonDiv.style.paddingLeft = "0px";
+    searchContainer.append(searchButtonDiv);
 
     var searchButton = document.createElement("button");
     searchButton.innerHTML = "SEARCH";
     searchButton.setAttribute("type", "button");
-    searchButton.className += " btn button-default";
+    searchButton.className += " col-md-2 btn button-default";
     searchButton.id = "selectedDishSearchButton";
-    searchContainer.append(searchButton);
+    searchButtonDiv.append(searchButton);
 
     
 
@@ -74,8 +63,8 @@ var SelectDish = function (container, dinnermodel) {
     //COURSE MENU (container)
     var courseMenu = document.createElement("div");
     courseMenu.style.display = "inline-block";
-    courseMenu.className += "col col-md-3";
-    dishSelectBar.append(courseMenu);
+    courseMenu.className += "col-md-3";
+    searchContainer.append(courseMenu);
 
     // course form
     var courseForm = document.createElement("div");
@@ -105,7 +94,6 @@ var SelectDish = function (container, dinnermodel) {
     var foodList = document.createElement("div");
     foodList.className += "row";
     foodList.id = "foodList";
-    foodList.innerHTML = '<div class="col-md-2"></div>';
     viewContainer.append(foodList);
 
 
@@ -114,17 +102,12 @@ var SelectDish = function (container, dinnermodel) {
     console.log(courseSelector.value);
 
 
-    var counter = 0;
     for(var i = 0; i < menu.length; i++){
         var dish = menu[i];
 
         //FOOD CONTAINER 1
         var foodContainer = document.createElement("div");
         foodContainer.className += "col col-md-2 foodContainer";
-        if(!counter){ //HOT FIX MOTHERFUCKERS
-            foodContainer.id = "firstFood";
-        }
-        counter++;
         foodList.append(foodContainer);
 
         //FOOD PICTURE 2

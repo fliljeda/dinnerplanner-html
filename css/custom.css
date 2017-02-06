@@ -140,7 +140,8 @@ hr {
 	border-color: black;
 	background-color: #d5d5d4;
 	height: 40px;
-	margin-left: -10px;
+    width: 100%;
+	margin-left: 0px;
 	margin-right: -10px;
 }
 
